@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Patient registration form for Awesome Grace Hospital">
+    <title>Awesome Grace Hospital | Patient Registration</title>
+    <link rel="icon" type="image/svg+xml" href="logo.png">
+    <link rel="apple-touch-icon" href="logo.png">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <main class="page">
+        <section class="hero">
+            <div class="badge"><span class="badge-dot"></span> New patient intake</div>
+            <h1 id="hospital-title">Awesome Grace Hospital</h1>
+            <p>
+                Register a new patient quickly and securely. Capture the details your front desk and clinical teams need
+                in a clear, organized intake form.
+            </p>
+
+            <div class="hero-cards">
+                <div class="mini-card">
+                    <strong>Faster check-in</strong>
+                    <span>Collect personal, contact, and medical details in one place before arrival.</span>
+                </div>
+                <div class="mini-card">
+                    <strong>Better coordination</strong>
+                    <span>Keep emergency contacts, insurance, and referral information easy to review.</span>
+                </div>
+            </div>
+
+            <div class="hero-footer">
+                <span class="hero-pill">24/7 care</span>
+                <span class="hero-pill">Emergency friendly</span>
+                <span class="hero-pill">Patient focused</span>
+            </div>
+        </section>
+
+        <section class="form-shell">
+            <div class="form-header">
+                <h2 id="registration-title">Patient Registration Form</h2>
+                <p>Please complete all required fields marked with an asterisk before submitting the registration.</p>
+            </div>
+
+            <form id="registrationForm" novalidate>
+                <div class="form-status" id="formStatus"></div>
+                <div class="section">
+                    <h3>Patient Information</h3>
+                    <div class="grid">
+                        <div class="field">
+                            <label for="first-name">First Name *</label>
+                            <input id="first-name" name="firstName" type="text" placeholder="Enter first name" required>
+                            <span class="error-message" id="first-name-error"></span>
+                        </div>
+                        <div class="field">
+                            <label for="last-name">Last Name *</label>
+                            <input id="last-name" name="lastName" type="text" placeholder="Enter last name" required>
+                            <span class="error-message" id="last-name-error"></span>
+                        </div>
+                        <div class="field">
+                            <label for="dob">Date of Birth *</label>
+                            <input id="dob" name="dob" type="date" required>
+                            <span class="error-message" id="dob-error"></span>
+                        </div>
+                        <div class="field">
+                            <label for="gender">Gender *</label>
+                            <select id="gender" name="gender" required>
+                                <option value="">Select gender</option>
+                                <option>Female</option>
+                                <option>Male</option>
+                                <option>Non-binary</option>
+                                <option>Prefer not to say</option>
+                            </select>
+                            <span class="error-message" id="gender-error"></span>
+                        </div>
+                        <div class="field full">
+                            <label>Marital Status</label>
+                            <div class="inline-options">
+                                <label class="radio"><input type="radio" name="maritalStatus" value="single"> Single</label>
+                                <label class="radio"><input type="radio" name="maritalStatus" value="married"> Married</label>
+                                <label class="radio"><input type="radio" name="maritalStatus" value="other"> Other</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>Contact Details</h3>
+                    <div class="grid">
+                        <div class="field full">
+                            <label for="address">Home Address *</label>
+                            <input id="address" name="address" type="text" placeholder="Street address" required>
+                            <span class="error-message" id="address-error"></span>
+                        </div>
+                        <div class="field">
+                            <label for="city">City *</label>
+                            <input id="city" name="city" type="text" placeholder="City" required>
+                            <span class="error-message" id="city-error"></span>
+                        </div>
+                        <div class="field">
+                            <label for="state">State / Province *</label>
+                            <input id="state" name="state" type="text" placeholder="State or province" required>
+                            <span class="error-message" id="state-error"></span>
+                        </div>
+                        <div class="field">
+                            <label for="postal">Postal Code *</label>
+                            <input id="postal" name="postalCode" type="text" placeholder="Postal code" required>
+                            <span class="error-message" id="postal-error"></span>
+                        </div>
+                        <div class="field">
+                            <label for="phone">Phone Number *</label>
+                            <input id="phone" name="phone" type="tel" placeholder="e.g. +1 555 123 4567" required>
+                            <span class="error-message" id="phone-error"></span>
+                        </div>
+                        <div class="field full">
+                            <label for="email">Email Address</label>
+                            <input id="email" name="email" type="email" placeholder="patient@example.com">
+                            <span class="error-message" id="email-error"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>Emergency Contact</h3>
+                    <div class="grid">
+                        <div class="field">
+                            <label for="emergency-name">Contact Name *</label>
+                            <input id="emergency-name" name="emergencyName" type="text" placeholder="Full name" required>
+                            <span class="error-message" id="emergency-name-error"></span>
+                        </div>
+                        <div class="field">
+                            <label for="relationship">Relationship *</label>
+                            <input id="relationship" name="relationship" type="text" placeholder="Relationship" required>
+                            <span class="error-message" id="relationship-error"></span>
+                        </div>
+                        <div class="field">
+                            <label for="emergency-phone">Contact Phone *</label>
+                            <input id="emergency-phone" name="emergencyPhone" type="tel" placeholder="Emergency phone" required>
+                            <span class="error-message" id="emergency-phone-error"></span>
+                        </div>
+                        <div class="field">
+                            <label for="emergency-alt">Alternate Phone</label>
+                            <input id="emergency-alt" name="emergencyAltPhone" type="tel" placeholder="Optional alternate phone">
+                            <span class="error-message" id="emergency-alt-error"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>Medical & Insurance</h3>
+                    <div class="grid">
+                        <div class="field full">
+                            <label for="reason">Reason for Visit *</label>
+                            <textarea id="reason" name="reasonForVisit" placeholder="Describe the reason for registration or visit" required></textarea>
+                            <span class="error-message" id="reason-error"></span>
+                        </div>
+                        <div class="field full">
+                            <label for="allergies">Known Allergies or Conditions</label>
+                            <textarea id="allergies" name="allergies" placeholder="List allergies, chronic conditions, or relevant medical concerns"></textarea>
+                        </div>
+                        <div class="field">
+                            <label for="insurance-provider">Insurance Provider</label>
+                            <input id="insurance-provider" name="insuranceProvider" type="text" placeholder="Insurance provider">
+                        </div>
+                        <div class="field">
+                            <label for="policy-number">Policy Number</label>
+                            <input id="policy-number" name="policyNumber" type="text" placeholder="Policy or member number">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>Consent</h3>
+                    <div class="grid">
+                        <label class="checkbox full"><input type="checkbox" name="agreeRecords" required> I confirm the information above is accurate.</label>
+                        <span class="error-message" id="agreeRecords-error"></span>
+                        <label class="checkbox full"><input type="checkbox" name="agreeTreatment"> I consent to treatment and hospital communication about my care.</label>
+                    </div>
+                    <p class="note">By submitting this form, you help Awesome Grace Hospital prepare for your visit and provide timely care.</p>
+                </div>
+
+                <div class="actions">
+                    <button class="button primary" type="submit">Submit Registration</button>
+                    <button class="button secondary" type="reset">Clear Form</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="page-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Awesome Grace Hospital</h4>
+                <p>Providing compassionate care and comprehensive healthcare services 24/7.</p>
+                <p class="contact-info">
+                    <strong>Phone:</strong> +234 xxx xxx xxxx<br>
+                    <strong>Emergency:</strong> 767
+                </p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Patient Portal</a></li>
+                    <li><a href="#">Find a Doctor</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Appointments</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Awesome Grace Hospital. All rights reserved. | Developed by Brainex Ventures</p>
+        </div>
+    </footer>
+</body>
+</html>

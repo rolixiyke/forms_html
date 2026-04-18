@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <rect width="256" height="256" fill="#0f766e" rx="32"/>
+  <g fill="none" stroke="white" stroke-width="16" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Cross/Plus symbol for hospital -->
+    <line x1="128" y1="80" x2="128" y2="176"/>
+    <line x1="80" y1="128" x2="176" y2="128"/>
+  </g>
+  <!-- Circle background for the cross -->
+  <circle cx="128" cy="128" r="64" fill="none" stroke="white" stroke-width="8" opacity="0.3"/>
+</svg>
